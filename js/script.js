@@ -18,7 +18,6 @@ info1.addEventListener("click", function() {
     setTimeout(function() {
         for (let x = 0; x <= content.length - 1; x++) {
             setTimeout(function() {
-                console.log(content[x])
                 content[x].style.opacity = "1";
             }, 1000 * x);
         }

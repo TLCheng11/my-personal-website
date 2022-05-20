@@ -1,3 +1,7 @@
+:root {
+    --glowing-green: #51ff0d;
+}
+
 #background {
     position: absolute;
     top: 0;
@@ -17,6 +21,45 @@
     z-index: -1;
 }
 
-#info {
-    color: grey;
+#content {
+    color: var(--glowing-green);
+}
+
+#info ul {
+    list-style-type: none;
+    padding: 0 25px;
+}
+
+#info ul li {
+    cursor: pointer;
+    position: relative;
+    
+    /* layout */
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 15px 0px;
+    width: 350px;
+    height: 55px;
+    clip-path: polygon(0px 0px, 350px 0px, 350px 30px, 325px 55px, 0px 55px);
+
+    /* Border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--glowing-green);
+
+}
+
+#info ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: -17px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+
+    /* Border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--glowing-green);
 }

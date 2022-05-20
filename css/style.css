@@ -2,6 +2,11 @@
     --glowing-green: #51ff0d;
 }
 
+@font-face {
+    font-family: Pixel;
+    src: url(../font/pixel_[allfont.net].ttf);
+}
+
 #background {
     position: absolute;
     top: 0;
@@ -23,6 +28,7 @@
 
 #content {
     color: var(--glowing-green);
+    font-family: "Pixel";
 }
 
 #info, #info-background {
@@ -49,6 +55,7 @@
 #info ul li, #info-background ul li {
     cursor: pointer;
     position: relative;
+    font-size: 30px;
     
     /* layout */
     box-sizing: border-box;

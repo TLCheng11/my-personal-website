@@ -8,6 +8,7 @@
 }
 
 body {
+    overflow: hidden;
     color: var(--glowing-green);
     font-family: "Pixel";
 }
@@ -118,7 +119,7 @@ body {
 }
 
 #detail div {
-    box-sizing: border-box;
+    position: absolute;
     padding: 10px;
     margin: 10px;
     width: 0;
@@ -127,6 +128,7 @@ body {
     transition: width 3s;
 
     /* Border */
+    box-sizing: border-box;
     border-style: solid;
     border-width: 2px;
     border-color: var(--glowing-green);
@@ -136,8 +138,8 @@ body {
 #detail div::before {
     content: "";
     position: absolute;
-    top: -5px;
-    left: -6px;
+    top: -18px;
+    left: -17px;
     width: 30px;
     height: 30px;
     transform: rotate(45deg);
@@ -153,11 +155,9 @@ body {
     transition: opacity 2s;
 }
 
-img {
+#detail img {
     height: 400px;
     width: 600px;
-    opacity: 0;
-    transition: opacity 2s;
 }
 
 /* Button setting */

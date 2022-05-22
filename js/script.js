@@ -1,12 +1,3 @@
-const myName = document.getElementById("myName");
-
-myName.addEventListener("mouseover", function() {
-    myName.style.color = "red";
-    setTimeout(() => {
-       myName.style.color = ""; 
-    }, 1000);
-});
-
 // to assign info click behavior
 
 const divCount = document.querySelectorAll("#detail div").length;

@@ -7,7 +7,7 @@ myName.addEventListener("mouseover", function() {
     }, 1000);
 });
 
-// to assign info on click behavior
+// to assign info click behavior
 
 const divCount = document.querySelectorAll("#detail div").length;
 let infoList = [];

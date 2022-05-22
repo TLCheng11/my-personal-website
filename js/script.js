@@ -9,17 +9,45 @@ myName.addEventListener("mouseover", function() {
 
 // to assign info on click behavior
 
-const info1 = document.getElementById("info_1");
-const detail1 = document.getElementById("detail_1");
-const content = document.getElementsByClassName("hide")
-info1.addEventListener("click", function() {
-    detail1.style.width = "100%";
-    detail1.style.opacity = "1";
-    setTimeout(function() {
-        for (let x = 0; x <= content.length - 1; x++) {
-            setTimeout(function() {
-                content[x].style.opacity = "1";
-            }, 1000 * x);
-        }
-    }, 2000);
-});
+const divCount = document.querySelectorAll("#detail div").length;
+let infoList = [];
+let detailList = [];
+for (let i = 1; i <= divCount; i++) {
+    let info = `info_${i}`;
+    let detail = `detail_${i}`;
+    infoList.push(document.getElementById(info));
+    detailList.push(document.getElementById(detail));
+}
+
+function reset() {
+    for (let i = 0; i < divCount; i++) {
+        detailList[i].transition = "width 0s";
+        detailList[i].style.width = "0";
+        detailList[i].style.opacity = "0";
+    }
+    let content = document.getElementsByClassName("hide");
+    for (let i = 0; i < content.length; i++) {
+        content[i].style.transition = "opacity 0s";
+        content[i].style.opacity = "0";
+    }
+}
+
+for (let i = 0; i < divCount; i++) {
+    infoList[i].addEventListener("click", function() {
+        reset();
+        let detail = `#detail_${i + 1} .hide`;
+        let content = document.querySelectorAll(detail)
+        detailList[i].style.transition = "width 3s";
+        detailList[i].style.width = "100%";
+        detailList[i].style.opacity = "1";
+        setTimeout(function() {
+            for (let x = 0; x <= content.length - 1; x++) {
+                setTimeout(function() {
+                    content[x].style.transition = "opacity 3s";
+                    content[x].style.opacity = "1";
+                }, 1000 * x);
+            }
+        }, 2000);
+    });
+}
+    

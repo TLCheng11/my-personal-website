@@ -125,7 +125,7 @@ body {
     width: 0;
     height: 550px;
     opacity: 0;
-    transition: width 3s;
+    /* transition: width 3s; */
 
     /* Border */
     box-sizing: border-box;
@@ -152,7 +152,7 @@ body {
 
 .hide {
     opacity: 0;
-    transition: opacity 2s;
+    /* transition: opacity 2s; */
 }
 
 #detail img {

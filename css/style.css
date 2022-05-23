@@ -123,7 +123,9 @@ body {
 }
 
 #content {
+    overflow: auto;
     position: relative;
+    height: calc(100vh - 300px);
 }
 
 /* Info Setting */
@@ -195,10 +197,12 @@ body {
 #detail {
     position: absolute;
     left: 400px;
-    width: 65%;
+    width: calc(100vw - 550px);
+    min-width: 800px;
 }
 
 #detail div {
+    overflow: hidden;
     position: absolute;
     padding: 10px;
     margin: 10px;

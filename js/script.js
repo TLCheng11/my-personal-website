@@ -32,7 +32,7 @@ for (let i = 0; i < divCount; i++) {
             let content = document.querySelectorAll(detail)
             detailList[i].style.transition = "height 3s, width 3s";
             detailList[i].style.width = "100%";
-            detailList[i].style.height = "550px";
+            detailList[i].style.height = "520px";
             detailList[i].style.opacity = "1";
             setTimeout(function() {
                 for (let x = 0; x <= content.length - 1; x++) {
